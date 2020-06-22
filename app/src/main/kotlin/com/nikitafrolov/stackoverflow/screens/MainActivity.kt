@@ -1,7 +1,8 @@
-package com.nikitafrolov.stackoverflow
+package com.nikitafrolov.stackoverflow.screens
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nikitafrolov.stackoverflow.R
 
 class MainActivity : AppCompatActivity() {
 

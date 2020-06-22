@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion versions.compileSdk
@@ -25,7 +26,6 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
-
 }
 
 dependencies {
@@ -37,4 +37,7 @@ dependencies {
     implementation support.appCompat
     implementation support.coreKtx
 
+    //  Dagger
+    implementation dagger.dagger
+    kapt dagger.compiler
 }
