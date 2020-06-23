@@ -17,5 +17,5 @@ interface ViewMvc {
      * properties of either the root Android View itself, or any of its child Android View's.
      * @return root Android View of this MVC View
      */
-    fun getRootView(): View
+    val rootView: View
 }

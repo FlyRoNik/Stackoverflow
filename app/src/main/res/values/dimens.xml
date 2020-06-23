@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--elevation-->
+    <dimen name="elevation_4">4dp</dimen>
+    <dimen name="elevation_8">8dp</dimen>
+
+    <!--corner radius-->
+    <dimen name="corner_radius_8">8dp</dimen>
+
+    <!--question-->
+    <dimen name="question_item_left_offset">16dp</dimen>
+    <dimen name="question_item_right_offset">16dp</dimen>
+    <dimen name="question_item_top_offset">8dp</dimen>
+    <dimen name="question_item_bottom_offset">8dp</dimen>
+</resources>

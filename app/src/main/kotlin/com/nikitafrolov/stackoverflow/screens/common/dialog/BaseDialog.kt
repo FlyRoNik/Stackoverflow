@@ -6,7 +6,7 @@ import com.nikitafrolov.stackoverflow.SOApp
 import com.nikitafrolov.stackoverflow.common.di.application.ApplicationComponent
 import com.nikitafrolov.stackoverflow.common.di.presentation.PresentationComponent
 import com.nikitafrolov.stackoverflow.common.di.presentation.PresentationModule
-import com.nikitafrolov.stackoverflow.exception.PerformInjectionAgainException
+import com.nikitafrolov.stackoverflow.common.exception.PerformInjectionAgainException
 
 abstract class BaseDialog : DialogFragment() {
 

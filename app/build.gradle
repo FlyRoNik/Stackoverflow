@@ -20,6 +20,7 @@ android {
             minifyEnabled false
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "ENDPOINT", '"https://api.stackexchange.com/"'
         }
     }
 
@@ -36,8 +37,26 @@ dependencies {
     // Support
     implementation support.appCompat
     implementation support.coreKtx
+    implementation support.recyclerview
+    implementation support.material
+    implementation support.lifecycle
 
     //  Dagger
     implementation dagger.dagger
     kapt dagger.compiler
+
+    //  Retrofit
+    implementation retrofit.retrofit
+    implementation retrofit.jackson
+    implementation retrofit.rxjava2
+
+    //  Jackson
+    implementation jackson.core
+    implementation jackson.annotations
+    implementation jackson.databind
+
+    //  ReactiveX
+    implementation reactivex.rxjava
+    implementation reactivex.rxkotlin
+    implementation reactivex.rxandroid
 }

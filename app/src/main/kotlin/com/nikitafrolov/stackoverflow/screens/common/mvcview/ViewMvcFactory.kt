@@ -2,7 +2,8 @@ package com.nikitafrolov.stackoverflow.screens.common.mvcview
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.Nullable
+import com.nikitafrolov.stackoverflow.screens.questionslist.QuestionListViewMvc
+import com.nikitafrolov.stackoverflow.screens.questionslist.QuestionListViewMvcImpl
 import javax.inject.Inject
 
 class ViewMvcFactory @Inject constructor(private val layoutInflater: LayoutInflater) {
@@ -15,9 +16,9 @@ class ViewMvcFactory @Inject constructor(private val layoutInflater: LayoutInfla
      * @param <T> the type of the required MVC view
      * @return new instance of MVC view
     </T> */
-    fun <T : ViewMvc> newInstance(mvcViewClass: Class<T>, @Nullable container: ViewGroup?): T =
+    fun <T : ViewMvc> newInstance(mvcViewClass: Class<T>, container: ViewGroup?): T =
         when (mvcViewClass) {
-            //TODO
+            QuestionListViewMvc::class.java -> QuestionListViewMvcImpl(layoutInflater, container)
             else -> throw IllegalArgumentException("unsupported MVC view class $mvcViewClass")
         } as T
 }

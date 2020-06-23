@@ -1,3 +1,3 @@
 package com.nikitafrolov.stackoverflow
 
-//TODO
+const val V_2_2 = "2.2"
