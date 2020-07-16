@@ -7,7 +7,7 @@ import com.nikitafrolov.stackoverflow.R
 import com.nikitafrolov.stackoverflow.question.Question
 import com.nikitafrolov.stackoverflow.screens.common.list.BaseRecyclerViewAdapter
 import com.nikitafrolov.stackoverflow.screens.common.list.BaseViewHolder
-import kotlinx.android.synthetic.main.item_question.view.*
+import kotlinx.android.synthetic.main.item_question.*
 import java.lang.ref.WeakReference
 
 interface QuestionAdapterListener {
@@ -53,10 +53,8 @@ class QuestionAdapter(
         }
 
         override fun bind(item: Question) {
-            itemView.run {
-                tvTitle.text = item.title
-                setOnClickListener { listener.onClickItem(item) }
-            }
+            tvTitle.text = item.title
+            itemView.setOnClickListener { listener.onClickItem(item) }
         }
     }
 }
